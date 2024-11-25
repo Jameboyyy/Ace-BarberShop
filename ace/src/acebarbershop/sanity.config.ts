@@ -5,7 +5,7 @@ import {schemaTypes} from './schemaTypes'
 
 export default defineConfig({
   name: 'default',
-  title: 'AceBarbershop',
+  title: 'AceBarbershop CMS',
 
   projectId: '7kd3ksnp',
   dataset: 'production',
@@ -15,4 +15,4 @@ export default defineConfig({
   schema: {
     types: schemaTypes,
   },
-})
+});
