@@ -1,42 +1,123 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 * {
-  box-sizing: border-box;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #A61010;
+  --secondary-color: #000000;
+  --accent-color: #6E0D0D;
+  --text-color: #F5F5F5;
+  --background-color: #2C2C2C;
+
+  --font-family-h1: 'Heading 1', sans-serif;
+  --font-family-h2: 'Heading 2' sans-serif;
+  --font-family-h3: 'Heading 3' sans-serif;
+  --font-family-h4: 'Heading 4' sans-serif;
+  --font-family-h5: 'Heading 5' sans-serif;
+  --font-family-p: 'Paragraph' sans-serif;
+
+  --font-size-h1: 25px;
+  --font-size-h2: 70px;
+  --font-size-h3: 25px;
+  --font-size-h4: 40px;
+  --font-size-h5: 25px;
+  --font-size-p: 20px;
+}
+
+html, body {
+  height: 100%;
+  background-color: var(--background-color);
+}
+
+main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+ul {
+  list-style: none;
+}
+
+li {
+  list-style: none;
+}
+
+@font-face {
+  font-family: 'Heading 1';
+  src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Heading 2';
+  src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Heading 3';
+  src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Heading 4';
+  src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Heading 5';
+  src: url('/fonts/Roboto-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Paragraph';
+  src: url('/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+  font-family: var(--font-family-h1);
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-family: var(--font-family-h2);
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-family: var(--font-family-h3);
+  font-size: var(--font-size-h3);
+}
+
+h4 {
+  font-family: var(--font-family-h4);
+  font-size: var(--font-size-h4);
+}
+
+h5 {
+  font-family: var(--font-family-h5);
+  font-size: var(--font-size-h5);
+}
+
+p {
+  font-family: var(--font-family-p);
+  font-size: var(--font-size-p);
 }

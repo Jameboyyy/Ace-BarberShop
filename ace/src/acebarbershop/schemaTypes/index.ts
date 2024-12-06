@@ -7,5 +7,5 @@ export const schemaTypes = [
     homepage,
     gallery,
     team,
-    services,
+    services
 ];

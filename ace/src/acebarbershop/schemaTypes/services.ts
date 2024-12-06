@@ -34,7 +34,7 @@ export default {
                             name: "serviceCost",
                             title: "Service Cost",
                             type: "string",
-                            validation: (rule: Rule) => rule.required
+                            validation: (rule: Rule) => rule.required()
                         },
                     ],
                 },
