@@ -13,7 +13,7 @@ const Homepage = () => {
 }
 
 export async function getServerSideProps() {
-    const sanityClient = (await import('.../acebarbershop/sanityClient')).default;
+    const sanityClient = (await import('../../acebarbershop/sanityClient')).default;
 
     const query = `*[_type == "homePage"][0]{
         landscapeTitle,
