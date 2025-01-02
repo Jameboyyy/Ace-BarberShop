@@ -16,8 +16,11 @@
     "react-dom": "19.0.0-rc-66855b96-20241106"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-react": "^7.26.3",
     "@sanity/types": "^3.64.3",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.3"
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^15.0.3"
   }
 }

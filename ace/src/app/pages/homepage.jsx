@@ -1,11 +1,11 @@
 import React from 'react';
 import './homepage.css';
 
-const Homepage = () => {
+const Homepage = ({landscapeTitle}) => {
     return (
             <section id="homepage">
                 <div className="homepage__landscape--container">
-                    
+                    <h1 className="homepage__title">{landscapeTitle || 'Default Title'}</h1>
                 </div>
             </section>
 
