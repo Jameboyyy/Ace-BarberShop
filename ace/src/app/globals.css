@@ -12,11 +12,11 @@
   --background-color: #2C2C2C;
 
   --font-family-h1: 'Heading 1', sans-serif;
-  --font-family-h2: 'Heading 2' sans-serif;
-  --font-family-h3: 'Heading 3' sans-serif;
-  --font-family-h4: 'Heading 4' sans-serif;
-  --font-family-h5: 'Heading 5' sans-serif;
-  --font-family-p: 'Paragraph' sans-serif;
+  --font-family-h2: 'Heading 2', sans-serif;
+  --font-family-h3: 'Heading 3', sans-serif;
+  --font-family-h4: 'Heading 4', sans-serif;
+  --font-family-h5: 'Heading 5', sans-serif;
+  --font-family-p: 'Paragraph', sans-serif;
 
   --font-size-h1: 25px;
   --font-size-h2: 70px;
