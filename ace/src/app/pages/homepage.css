@@ -2,10 +2,138 @@
     background-color: var(--background-color);
 }
 
-.homepage__landscape__container {
+/* Landscape Section */
+
+.homepage__landscape--container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 85vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.landscape__video--container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.landscape-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.homepage__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+
+/* Mission Statement Section */
+
+.homepage__missionStatement--container {
+    margin: 10% auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.missionStatement--Title {
+    text-align: center;
+    margin: 5% auto;
+}
+
+.missionStatement--para {
+    max-width: 75%;
+    margin: 5% auto;
+    text-align: center;
+}
+
+.missionStatement--btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5% auto;
+    text-align: center;
+    background-color: var(--accent-color);
+    max-width: fit-content;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    font-family: var(--font-family-h4);
+    font-size: var(--font-size-h4);
+    color: var(--color-h4);
+}
+
+/* Services Section */
+
+.homepage__services--container {
+    margin: 10% auto;
+    max-width: 75%;
+}
+
+.homepage__services--title {
+    text-align: center;
+}
+
+.homepage__service--container {
+    line-height: 2;
+}
+
+.homepage__service--heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.homepage__service--desc {
+    margin-left: 5%;
+}
+
+/* Team Section */
+
+.homepage__meetTheTeam--container {
+    margin: 10% auto;
+    text-align: center;
+}
+
+.meetTheTeam--title {
+    margin: 5% auto;
+}
+
+.barber__card-container {
+
+}
+
+.barber__card--img {
+
+}
+
+.barber__card--name {
+
+}
+
+
+/* Gallery Section */
+
+.homepage__gallery--container {
+    margin: 10% auto;
+    text-align: center;
+}
+
+.homepage__gallery--title {
+    margin: 5% auto;
+}
+
+.gallery__card--container {
+
 }

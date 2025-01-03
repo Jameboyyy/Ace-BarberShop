@@ -1,34 +1,79 @@
 import Homepage from './pages/homepage';
-import sanityClient from '../acebarbershop/sanityClient'; // Import existing Sanity client
+import sanityClient from '../acebarbershop/sanityClient';
 
 async function getSanityData() {
-    const query = `*[_type == "homePage"][0]{
+    const homepageQuery = `*[_type == "homePage"][0]{
         landscapeTitle,
         "landscapeVideoUrl": landscapeVideo.asset->url,
         missionStatement
     }`;
 
+    const servicesQuery = `*[_type == "servicesPage"][0]{
+        servicesTitle,
+        servicesProfile[] {
+            serviceTitle,
+            serviceDesc,
+            serviceCost
+        }
+    }`;
+
+    const galleryQuery = `*[_type == "gallerypage"][0]{
+        title,
+        galleryImages[]{
+            asset->{
+                _id,
+                url
+            }
+        }
+    }`;
+
+    const teamQuery = `*[_type == "teampage"][0]{
+        teamLandscapePicture[]{
+            asset->{
+                _id,
+                url
+            }
+        },
+        barberProfiles[] {
+            name,
+            bio,
+            "photoUrl": barberPhoto.asset->url,
+            sortOrder
+        }
+    }`;
+
     try {
-        const data = await sanityClient.fetch(query);
-        return data;
+        const [homepageData, servicesData, galleryData, teamData] = await Promise.all([
+            sanityClient.fetch(homepageQuery),
+            sanityClient.fetch(servicesQuery),
+            sanityClient.fetch(galleryQuery),
+            sanityClient.fetch(teamQuery),
+        ]);
+
+        return { homepageData, servicesData, galleryData, teamData };
     } catch (error) {
         console.error('Error fetching data from Sanity:', error);
         return {
-            landscapeTitle: 'Error fetching data',
-            landscapeVideoUrl: '',
-            missionStatement: '',
+            homepageData: null,
+            servicesData: null,
+            galleryData: null,
+            teamData: null,
         };
     }
 }
 
 export default async function Page() {
-    const data = await getSanityData();
+    const { homepageData, servicesData, galleryData, teamData } = await getSanityData();
 
     return (
         <Homepage
-            landscapeTitle={data.landscapeTitle}
-            landscapeVideoUrl={data.landscapeVideoUrl}
-            missionStatement={data.missionStatement}
+            landscapeTitle={homepageData?.landscapeTitle}
+            landscapeVideoUrl={homepageData?.landscapeVideoUrl}
+            missionStatement={homepageData?.missionStatement}
+            servicesTitle={servicesData?.servicesTitle || []}
+            servicesProfile={servicesData?.servicesProfile || []}
+            galleryImages={galleryData?.galleryImages || []}
+            barberProfiles={teamData?.barberProfiles || []}
         />
     );
 }

@@ -11,6 +11,13 @@
   --text-color: #F5F5F5;
   --background-color: #2C2C2C;
 
+  --color-h1: #f5f5f5;
+  --color-h2: #f5f5f5;
+  --color-h3: #f5f5f5;
+  --color-h4: #f5f5f5;
+  --color-h5: #f5f5f5;
+  --color-p: #f5f5f5;
+
   --font-family-h1: 'Heading 1', sans-serif;
   --font-family-h2: 'Heading 2', sans-serif;
   --font-family-h3: 'Heading 3', sans-serif;
@@ -95,29 +102,36 @@ li {
 h1 {
   font-family: var(--font-family-h1);
   font-size: var(--font-size-h1);
+  color: var(--color-h1);
 }
 
 h2 {
   font-family: var(--font-family-h2);
   font-size: var(--font-size-h2);
+  color: var(--color-h2);
 }
 
 h3 {
   font-family: var(--font-family-h3);
   font-size: var(--font-size-h3);
+  color: var(--color-h3);
 }
 
 h4 {
   font-family: var(--font-family-h4);
   font-size: var(--font-size-h4);
+  color: var(--color-h4);
 }
 
 h5 {
   font-family: var(--font-family-h5);
   font-size: var(--font-size-h5);
+  color: var(--color-h5);
+  line-height: 1.5;
 }
 
 p {
   font-family: var(--font-family-p);
   font-size: var(--font-size-p);
+  color: var(--color-p);
 }
