@@ -63,37 +63,53 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                 </button>
             </div>
             <div className="homepage__meetTheTeam--container">
+                <div className="homepage__meetTheTeam--title--container">
                     <h2 className="meetTheTeam--title">Meet The Team</h2>
+                </div>
+                <div className="barber__card--wrapper">
                     {barberProfiles && barberProfiles.length > 0 ? (
-                        barberProfiles
-                        .slice(0,3)
-                        .map((barber, index) => (
-                            <div key={barber.barbersortOrder || index}
-                            className="barber__card--container">
-                                <div className="barber__card--img">
-                                    <img src={barber.photoUrl} alt="" />
+                            barberProfiles
+                            .slice(0,3)
+                            .map((barber, index) => (
+                                <div key={barber.barbersortOrder || index}
+                                className="barber__card--container">
+                                    <div className="barber__card--img">
+                                        <img src={barber.photoUrl} alt="" />
+                                    </div>
+                                    <h4 className="barber__card--name">{barber.name}</h4>
+                                    <p className="barber__card--desc">{barber.bio}</p>
                                 </div>
-                                <h4 className="barber__card--name">{barber.name}</h4>
-                                <h5 className="barber__card--desc">{barber.bio}</h5>
-                            </div>
-                        ))
-                    ) :(
-                        <p>No barber profiles available</p>
-                    )}
+                            ))
+                        ) :(
+                            <p>No barber profiles available</p>
+                        )}
+                </div>
+                    <button
+                        className="missionStatement--btn"
+                        onClick={handleBooking}
+                        aria-label="Book an appointment now"
+                        >
+                            See More
+                    </button>
             </div>
             <div className="homepage__gallery--container">
                 <h2 className="homepage__gallery--title">Gallery</h2>
-                {galleryImages && galleryImages.length > 0 ? (
-                    galleryImages
-                    .slice(0,6)
-                    .map((image, index) => (
-                        <div key={image.id || index} className="gallery__card--container">
-                            <img src={image.url} alt="" />
-                        </div>
-                    ))
-                ) :(    
-                    <p>No gallery images available</p>
-                )}
+                    {galleryImages && galleryImages.length > 0 ? (
+                        galleryImages
+                            .slice(0, 6)
+                            .map((image, index) => (
+                                <div
+                                    key={image.id || index}
+                                    className={`gallery__card--container ${
+                                        index % 3 === 2 ? "landscape" : "portrait"
+                                    }`}
+                                >
+                                    <img src={image.url} />
+                                </div>
+                            ))
+                    ) : (
+                        <p>No gallery images available</p>
+                    )}
             </div>
         </section>
     );

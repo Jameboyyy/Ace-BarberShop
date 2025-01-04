@@ -1,4 +1,4 @@
-import { Rule } from '@sanity/types'
+import { Rule } from '@sanity/types';
 
 export default {
     name: "gallerypage",
@@ -9,18 +9,40 @@ export default {
             name: "title",
             title: "Page Title",
             type: "string",
-            validation: (rule: Rule) => rule.required()
         },
         {
             name: "galleryImages",
             title: "Gallery Images",
             type: "array",
-            of: [{ type: "image" }],
+            of: [
+                {
+                    type: "image",
+                    fields: [
+                        {
+                            name: "orientation",
+                            title: "Orientation",
+                            type: "string",
+                            options: {
+                                list: [
+                                    { title: "Portrait", value: "portrait" },
+                                    { title: "Landscape", value: "landscape" },
+                                ],
+                                layout: "radio",
+                            },
+                            validation: (rule: Rule) =>
+                                rule.required().error("Please specify the orientation."),
+                        },
+                    ],
+                    options: {
+                        hotspot: true, // Allows better cropping control
+                    },
+                },
+            ],
             options: {
                 layout: "grid",
             },
             validation: (rule: Rule) =>
-            rule.required().min(1).error("Add at least one image into the gallery",)
+                rule.required().min(1).error("Add at least one image to the gallery."),
         },
     ],
 };

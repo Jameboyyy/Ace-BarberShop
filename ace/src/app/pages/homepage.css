@@ -102,24 +102,61 @@
 /* Team Section */
 
 .homepage__meetTheTeam--container {
-    margin: 10% auto;
+    position: relative;
+    flex-direction: column;
     text-align: center;
+    justify-content: center;
+    display: flex;
+    overflow: hidden;
+    align-items: stretch;
+    gap: 5%;
+    z-index: 0;
 }
+
 
 .meetTheTeam--title {
     margin: 5% auto;
 }
 
-.barber__card-container {
+.barber__card--wrapper {
+    display: flex;
+    flex: wrap;
+    justify-content: center;
+    align-items: stretch    ;
+    gap: 5%;
+}
 
+.barber__card--container {
+    width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2%;
+    background-color: var(--accent-color) !important;
+    overflow: hidden;
+    border-radius: 15px;
 }
 
 .barber__card--img {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
 
+.barber__card--img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .barber__card--name {
+    text-align: center;
+}
 
+.barber__card--desc {
+    margin: 5% auto;
 }
 
 
@@ -128,12 +165,43 @@
 .homepage__gallery--container {
     margin: 10% auto;
     text-align: center;
+    max-width: 1200px;
 }
 
-.homepage__gallery--title {
-    margin: 5% auto;
+.gallery__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
 
 .gallery__card--container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 150px;
+}
 
+.gallery__card--container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+.gallery__card--container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.portrait {
+    grid-row: span 2;
+    height: 300px;
+}
+
+.landscape {
+    grid-column: span 2;
+    height: 150px;
 }
