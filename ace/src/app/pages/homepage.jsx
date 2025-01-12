@@ -94,6 +94,7 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
             </div>
             <div className="homepage__gallery--container">
                 <h2 className="homepage__gallery--title">Gallery</h2>
+                <div className="gallery__grid">
                     {galleryImages && galleryImages.length > 0 ? (
                         galleryImages
                             .slice(0, 6)
@@ -101,7 +102,7 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                                 <div
                                     key={image.id || index}
                                     className={`gallery__card--container ${
-                                        index % 3 === 2 ? "landscape" : "portrait"
+                                        image.orientation === "landscape" ? "landscape" : "portrait"
                                     }`}
                                 >
                                     <img src={image.url} />
@@ -110,6 +111,7 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                     ) : (
                         <p>No gallery images available</p>
                     )}
+                </div>
             </div>
         </section>
     );

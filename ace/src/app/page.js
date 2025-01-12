@@ -23,7 +23,8 @@ async function getSanityData() {
             asset->{
                 _id,
                 url
-            }
+            },
+            orientation
         }
     }`;
 
