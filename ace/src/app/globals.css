@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+textarea {
+  resize: none;
+}
+
 :root {
   --primary-color: #A61010;
   --secondary-color: #000000;
@@ -57,30 +61,45 @@ li {
   list-style: none;
 }
 
+input:focus {
+  outline: none;
+  border: none;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+textarea {
+  outline: none;
+  border: none;
+}
+
 @font-face {
   font-family: 'Heading 1';
-  src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Heading 2';
-  src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: normal;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Heading 3';
-  src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Heading 4';
-  src: url('/fonts/DancingScript-VariableFont_wght.ttf') format('truetype');
+  src: url('/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }

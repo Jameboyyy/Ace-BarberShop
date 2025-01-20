@@ -20,11 +20,8 @@ async function getSanityData() {
     const galleryQuery = `*[_type == "gallerypage"][0]{
         title,
         galleryImages[]{
-            asset->{
-                _id,
-                url
-            },
-            orientation
+            "url": asset-> url,
+            _id
         }
     }`;
 

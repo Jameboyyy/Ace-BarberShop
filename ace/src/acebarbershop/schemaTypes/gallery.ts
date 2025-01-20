@@ -14,30 +14,7 @@ export default {
             name: "galleryImages",
             title: "Gallery Images",
             type: "array",
-            of: [
-                {
-                    type: "image",
-                    fields: [
-                        {
-                            name: "orientation",
-                            title: "Orientation",
-                            type: "string",
-                            options: {
-                                list: [
-                                    { title: "Portrait", value: "portrait" },
-                                    { title: "Landscape", value: "landscape" },
-                                ],
-                                layout: "radio",
-                            },
-                            validation: (rule: Rule) =>
-                                rule.required().error("Please specify the orientation."),
-                        },
-                    ],
-                    options: {
-                        hotspot: true, // Allows better cropping control
-                    },
-                },
-            ],
+            of: [{ type: "image"}],
             options: {
                 layout: "grid",
             },
