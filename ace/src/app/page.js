@@ -1,4 +1,4 @@
-import Homepage from './pages/homepage';
+import Homepage from './homepage/homepage';
 import sanityClient from '../acebarbershop/sanityClient';
 
 async function getSanityData() {

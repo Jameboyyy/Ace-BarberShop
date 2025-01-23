@@ -1,39 +1,12 @@
 "use client"
 
-import React, { useRef } from 'react';
+import React from 'react';
 import './homepage.css';
 
 const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, servicesTitle, servicesProfile, barberProfiles, galleryImages}) => {
     const handleBooking = () => {
 
         }
-
-        const form = useRef();
-
-        const sendEmail = (e) => {
-            e.preventDefault();
-
-            emailjs
-                .sendForm(
-                    'service_civ4wxd', // serviceID
-                    'template_1wusypd', // templateID
-                    form.current,
-
-                )
-                .then(
-                    (result) => {
-                        alert('Your message has been sent successfully!');
-                    },
-                    (error) => {
-                        alert('An error occurred while sending your message.');
-                    }
-                );
-
-            form.current.reset();
-
-        const placeholderURL= '/placeholder-booking';
-        window.location.href = placeholderURL;
-    };
     return (
         <section id="homepage">
             <div className="homepage__landscape--container">
@@ -159,33 +132,6 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                     12072 Knott St Ste C <br/>
                     Garden Grove, CA 92841
                     </p>
-                </div>
-            </div>
-            <div className="homepage__contact--container">
-                <div className="homepage__contact--box">
-                    <h2 className="contact__title">Contact</h2>
-                    <form ref={form} className="contact__form">
-                        <div className="form__row">
-                            <div className="form__group half-width">
-                                <label htmlFor="name">Name</label>
-                                <input type="text" id='name' name="user_name" placeholder='John Smith'required />
-                            </div>
-                            <div className="form__group half-width">
-                                <label htmlFor="email">Email</label>
-                                <input type="email" id='email' name='user_email' placeholder='johnsmith@email.com' required />
-                            </div>
-                        </div>
-                        <div className="form__group">
-                            <label htmlFor="message">Message</label>
-                            <textarea name="message" id="message" placeholder='Your Message...' rows="5">
-                                
-                            </textarea>
-                        </div>
-                        <button className="form__submit--btn">
-                            Submit
-                        </button>
-                        
-                    </form>
                 </div>
             </div>
         </section>

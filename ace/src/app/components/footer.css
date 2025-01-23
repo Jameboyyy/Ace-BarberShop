@@ -1,0 +1,22 @@
+
+.footer__container {
+    margin: 0 auto;
+    text-align: center;
+
+}
+
+.footer__links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 2%;
+}
+
+
+.footer__link a:hover {
+    text-decoration: underline;
+}
+
+.footer__credits {
+    margin-bottom: 1%;
+}
