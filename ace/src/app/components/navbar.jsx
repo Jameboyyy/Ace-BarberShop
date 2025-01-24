@@ -9,7 +9,7 @@ const Navbar = () => {
                 <ul className="nav__links">
                     <li className="nav__link">
                         <h1>
-                            <Link href="/Services">Services</Link>
+                            <Link href="/services">Services</Link>
                         </h1>
                     </li>
                     <li className="nav__link">
@@ -19,7 +19,7 @@ const Navbar = () => {
                     </li>
                     <li className="nav__link">
                         <h1>
-                            <Link href="/Gallery">Gallery</Link>
+                            <Link href="/gallery">Gallery</Link>
                         </h1>
                     </li>
                 </ul>

@@ -18,12 +18,12 @@ const Footer = () => {
                 </li>
                 <li className="footer__link">
                     <p>
-                        <Link href="#gallery">Gallery</Link>
+                        <Link href="#team">Team</Link>
                     </p>
                 </li>
                 <li className="footer__link">
                     <p>
-                        <Link href="#team">Team</Link>
+                        <Link href="#gallery">Gallery</Link>
                     </p>
                 </li>
             </ul>

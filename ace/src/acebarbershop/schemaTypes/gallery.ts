@@ -19,7 +19,7 @@ export default {
                 layout: "grid",
             },
             validation: (rule: Rule) =>
-                rule.required().min(1).error("Add at least one image to the gallery."),
+                rule.required().min(1).max(20).error("You must add between 1 and 20 images to the gallery."),
         },
     ],
 };

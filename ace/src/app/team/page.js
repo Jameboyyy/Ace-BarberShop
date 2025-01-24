@@ -39,6 +39,7 @@ export default async function Page() {
     return (
         <Teampage
             barberProfiles={teamData?.barberProfiles || []}
+            teamLandscapePicture={teamData?.teamLandscapePicture || []}
         />
     );
 }
