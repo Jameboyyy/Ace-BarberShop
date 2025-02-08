@@ -24,29 +24,35 @@ const Navbar = () => {
 
       {/* Sidebar Navigation (Pop-out from Left) */}
       <div className={`nav__sidebar ${isOpen ? "active" : ""}`}>
-        <button className="close-btn" onClick={closeMenu}>
-          ✖
-        </button>
+        <button className="close-btn" onClick={closeMenu}>✖</button>
         <ul>
           <li>
-            <Link href="/services" onClick={closeMenu}>
-              Services
-            </Link>
+            <h1>
+              <Link href="/services" onClick={closeMenu}>
+                Services
+              </Link>
+            </h1>
           </li>
           <li>
-            <Link href="/team" onClick={closeMenu}>
-              Team
-            </Link>
+            <h1>
+              <Link href="/team" onClick={closeMenu}>
+                Team
+              </Link>
+            </h1>
           </li>
           <li>
-            <Link href="/gallery" onClick={closeMenu}>
-              Gallery
-            </Link>
+            <h1>
+              <Link href="/gallery" onClick={closeMenu}>
+                Gallery
+              </Link>
+            </h1>
           </li>
           <li>
-            <Link href="/services" onClick={closeMenu}>
-              Book Now
-            </Link>
+            <h1>
+              <Link href="/services" onClick={closeMenu}>
+                Book Now
+              </Link>
+            </h1>
           </li>
         </ul>
       </div>
