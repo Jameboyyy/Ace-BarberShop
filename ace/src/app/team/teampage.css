@@ -64,11 +64,21 @@
     width: 100%;
     height: 300px;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .barber__card--img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
 }
 
+@media screen and (max-width: 768px) {
+    .barber__card--wrapper {
+        row-gap: 15px;
+        column-gap: 10px;
+    }
+}

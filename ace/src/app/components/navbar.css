@@ -1,3 +1,4 @@
+/* Navbar Container */
 .navbar__container {
     margin: 0 auto;
     padding: 0;
@@ -11,40 +12,39 @@
     position: relative;
 }
 
+/* Logo */
+.nav__logo {
+    max-width: 180px;
+    height: auto;
+}
+
+/* Left Nav (Aligns Services, Team, and Gallery) */
 .nav__left {
     display: flex;
     position: absolute;
     left: 4rem;
 }
 
-.nav__img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.nav__right {
-    position: absolute;
-    right: 4rem;
-    display: flex;
-}
-
 .nav__links {
     display: flex;
-    gap: 3rem;
+    gap: 2rem;
 }
 
+/* Right Nav (Aligns Book Now) */
+.nav__right {
+    display: flex;
+    position: absolute;
+    right: 4rem;
+}
+
+/* Navigation Links */
 .nav__link {
     position: relative;
     color: var(--text-color);
+    text-decoration: none;
 }
 
-.nav__logo {
-    max-width: 200px;
-    height: auto;
-    align-items: center;
-}
-
+/* Hover Effect (Underline Animation) */
 .nav__link::after {
     content: '';
     position: absolute;
@@ -58,4 +58,124 @@
 
 .nav__link:hover::after {
     width: 100%;
+}
+
+/* Sidebar (Hidden Initially) */
+.nav__sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Initially off-screen */
+    width: 250px; /* Sidebar width */
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+    transition: left 0.3s ease-in-out;
+    z-index: 999;
+}
+
+/* Show Sidebar when Active */
+.nav__sidebar.active {
+    left: 0; /* Slide in */
+}
+
+/* Sidebar Links */
+.nav__sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.nav__sidebar li {
+    padding: 1.5rem;
+}
+
+.nav__sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    display: block; /* Ensures clickable area */
+    position: relative;
+}
+
+/* Sidebar Hover Effect (Same as Navbar) */
+.nav__sidebar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    width: 0;
+    height: 3px;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav__sidebar a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+}
+
+/* Overlay Effect when Sidebar is Open */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 998;
+}
+
+/* Show Overlay when Sidebar is Open */
+.overlay.active {
+    display: block;
+}
+
+/* Hamburger Button */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-color);
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Show Sidebar Only on Mobile */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide regular navigation on mobile */
+    .nav__left,
+    .nav__right {
+        display: none;
+    }
+
+    /* Ensure sidebar is visible when active */
+    .nav__sidebar {
+        display: flex;
+    }
 }
