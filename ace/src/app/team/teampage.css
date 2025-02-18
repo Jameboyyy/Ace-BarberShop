@@ -4,10 +4,10 @@
     box-sizing: border-box;
     text-align: center;
     min-height: 75vh;
+    justify-content: center;
 }
 
 .teampage__landscape--container {
-    all: unset;
     width: 100%;
     height: 85vh;
     margin: 0 auto;
@@ -26,14 +26,13 @@
 
 
 .homepage__meetTheTeam--container {
-    all: unset;
     position: relative;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     display: flex;
     margin: 10% auto;
-    gap: 5%;
+    gap: 2%;
 }
 
 .meetTheTeam--title {
@@ -42,17 +41,10 @@
 
 .barber__card--wrapper {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: var(--grid-columns, repeat(4, 1fr));
     justify-content: center;
-    gap: 5%;
-    flex: wrap;
+    gap: 20px;
     align-items: stretch;
-    margin: 0 auto;
-}
-
-.barber__card--wrapper > :nth-child(n+5) {
-    grid-column: span 1; /* Ensures the last barber aligns properly */
-    justify-self: center;
 }
 
 .barber__card--container {

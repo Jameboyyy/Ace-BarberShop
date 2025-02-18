@@ -126,11 +126,12 @@
 
 .barber__card--wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: var(--grid-columns, repeat(3, 1fr));
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch    ;
     gap: 5%;
+    margin: auto;
 }
 
 .barber__card--container {

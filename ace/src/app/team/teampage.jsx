@@ -10,11 +10,11 @@ const Teampage = ({barberProfiles, teamLandscapePicture }) => {
     }
 
     useEffect(() => {
-        document.body.classList.remove("homepage-styles");
-        document.body.classList.add("teampage-styles");
+        // ✅ Ensure team page grid resets correctly
+        document.documentElement.style.setProperty("--grid-columns", "repeat(4, 1fr)");
 
         return () => {
-            document.body.classList.remove("teampage-styles"); // ✅ Cleanup when leaving
+            document.documentElement.style.removeProperty("--grid-columns"); // ✅ Cleanup when leaving
         };
     }, []);
 

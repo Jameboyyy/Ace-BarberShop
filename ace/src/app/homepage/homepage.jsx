@@ -1,12 +1,20 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import './homepage.css';
 
 const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, servicesTitle, servicesProfile, barberProfiles, galleryImages}) => {
     const handleBooking = () => {
 
         }
+        useEffect(() => {
+            // ✅ Ensure homepage grid resets correctly
+            document.documentElement.style.setProperty("--grid-columns", "repeat(3, 1fr)");
+    
+            return () => {
+                document.documentElement.style.removeProperty("--grid-columns"); // ✅ Cleanup when leaving
+            };
+        }, []);
     return (
         <section id="homepage">
             <div className="homepage__landscape--container">
