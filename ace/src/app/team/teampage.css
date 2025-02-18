@@ -7,6 +7,7 @@
 }
 
 .teampage__landscape--container {
+    all: unset;
     width: 100%;
     height: 85vh;
     margin: 0 auto;
@@ -25,26 +26,33 @@
 
 
 .homepage__meetTheTeam--container {
+    all: unset;
     position: relative;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     display: flex;
-    overflow-x: hidden;
     margin: 10% auto;
     gap: 5%;
 }
 
 .meetTheTeam--title {
-    margin-bottom: 5%;
+    margin: 5% auto;
 }
 
 .barber__card--wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     gap: 5%;
     flex: wrap;
     align-items: stretch;
+    margin: 0 auto;
+}
+
+.barber__card--wrapper > :nth-child(n+5) {
+    grid-column: span 1; /* Ensures the last barber aligns properly */
+    justify-self: center;
 }
 
 .barber__card--container {
@@ -74,6 +82,16 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.teampage-styles .barber__card--wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: auto;
 }
 
 @media screen and (max-width: 768px) {

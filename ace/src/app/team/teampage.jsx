@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import './teampage.css';
 
 
@@ -8,6 +8,15 @@ const Teampage = ({barberProfiles, teamLandscapePicture }) => {
     const handleBooking = () => {
 
     }
+
+    useEffect(() => {
+        document.body.classList.remove("homepage-styles");
+        document.body.classList.add("teampage-styles");
+
+        return () => {
+            document.body.classList.remove("teampage-styles"); // ✅ Cleanup when leaving
+        };
+    }, []);
 
     return (
         <section id="teampage">
