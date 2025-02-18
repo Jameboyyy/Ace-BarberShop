@@ -1,4 +1,4 @@
-import { revalidatePath } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 
 export async function POST(req) {
     try {
@@ -10,9 +10,8 @@ export async function POST(req) {
         console.log("🔄 Revalidating all pages...");
 
         // 🔥 Revalidate all paths that depend on Sanity data
-        revalidatePath("/"); // Homepage
-        revalidatePath("/gallery"); // Gallery Page
-        revalidatePath("/team"); // Team Page
+        revalidatePath("/*");
+        revalidateTag("sanity-data");
 
         return new Response("Success! All pages updated.", { status: 200 });
     } catch (error) {
