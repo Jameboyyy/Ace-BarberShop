@@ -14,7 +14,7 @@ export default {
             title: "Landscape Video",
             type: "file",
             options: {
-                accept: "video/*",
+                accept: "video/mp4, video/quicktime, video/webm",
             },
         },
         {
