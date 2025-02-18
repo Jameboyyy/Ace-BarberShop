@@ -22,7 +22,7 @@ async function getSanityData () {
 
     try {
         const [teamData] = await Promise.all([
-            sanityClient.fetch(teamQuery),
+            sanityClient.fetch(teamQuery, { cache: "no-store"}),
         ]);
 
         revalidatePath('/team');

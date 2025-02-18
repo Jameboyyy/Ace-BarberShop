@@ -1,6 +1,5 @@
 import Homepage from './homepage/homepage';
 import sanityClient from '../acebarbershop/sanityClient';
-import { revalidatePath } from 'next/cache';
 
 async function getSanityData() {
     const homepageQuery = `*[_type == "homePage"][0]{
@@ -43,13 +42,12 @@ async function getSanityData() {
 
     try {
         const [homepageData, servicesData, galleryData, teamData] = await Promise.all([
-            sanityClient.fetch(homepageQuery),
-            sanityClient.fetch(servicesQuery),
-            sanityClient.fetch(galleryQuery),
-            sanityClient.fetch(teamQuery),
+            sanityClient.fetch(homepageQuery, { cache: "no-store"}),
+            sanityClient.fetch(servicesQuery, { cache: "no-store"}),
+            sanityClient.fetch(galleryQuery, { cache: "no-store"}),
+            sanityClient.fetch(teamQuery, { cache: "no-store"}),
         ]);
 
-        revalidatePath('/');
 
         return { homepageData, servicesData, galleryData, teamData };
     } catch (error) {
