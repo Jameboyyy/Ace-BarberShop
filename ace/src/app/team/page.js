@@ -2,6 +2,7 @@
 
 import Teampage from "./teampage";
 import sanityClient from "@/acebarbershop/sanityClient";
+import { revalidatePath } from "next/cache";
 
 async function getSanityData () {
     const teamQuery = `*[_type == "teampage"][0]{
@@ -23,6 +24,8 @@ async function getSanityData () {
         const [teamData] = await Promise.all([
             sanityClient.fetch(teamQuery),
         ]);
+
+        revalidatePath('/team');
 
         return { teamData };
     } catch (error) {

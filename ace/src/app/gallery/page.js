@@ -1,5 +1,6 @@
 import Gallerypage from './gallerypage';
 import sanityClient from '@/acebarbershop/sanityClient';
+import { revalidatePath } from 'next/cache';
 
 async function fetchGalleryData() {
     const galleryQuery = `*[_type == "gallerypage"] [0]{
@@ -13,6 +14,8 @@ async function fetchGalleryData() {
         const [galleryData] = await Promise.all([
             sanityClient.fetch(galleryQuery),
         ]);
+
+        revalidatePath('/gallery');
 
         return { galleryData };
     }   catch (error) {

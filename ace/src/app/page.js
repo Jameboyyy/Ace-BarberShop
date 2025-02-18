@@ -1,5 +1,6 @@
 import Homepage from './homepage/homepage';
 import sanityClient from '../acebarbershop/sanityClient';
+import { revalidatePath } from 'next/cache';
 
 async function getSanityData() {
     const homepageQuery = `*[_type == "homePage"][0]{
@@ -47,6 +48,8 @@ async function getSanityData() {
             sanityClient.fetch(galleryQuery),
             sanityClient.fetch(teamQuery),
         ]);
+
+        revalidatePath('/');
 
         return { homepageData, servicesData, galleryData, teamData };
     } catch (error) {
