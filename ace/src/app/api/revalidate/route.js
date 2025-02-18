@@ -10,7 +10,9 @@ export async function POST(req) {
         console.log("🔄 Revalidating all pages...");
 
         // 🔥 Revalidate all paths that depend on Sanity data
-        revalidatePath("/*");
+        revalidatePath("/");
+        revalidatePath("/team");
+        revalidatePath("/gallery");
         revalidateTag("sanity-data");
 
         return new Response("Success! All pages updated.", { status: 200 });
