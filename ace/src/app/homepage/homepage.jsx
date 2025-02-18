@@ -21,7 +21,10 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                             className="landscape-video"
                             loading="lazy"
                         >
-                            <source src={landscapeVideoUrl} type="video/mp4" />
+                            <source src={landscapeVideoUrl.replace(/\.(mp4|mov|webm|ogg)$/, ".mp4")} type="video/mp4" />
+                            <source src={landscapeVideoUrl.replace(/\.(mp4|mov|webm|ogg)$/, ".mov")} type="video/quicktime" />
+                            <source src={landscapeVideoUrl.replace(/\.(mp4|mov|webm|ogg)$/, ".webm")} type="video/webm" />
+                            <source src={landscapeVideoUrl.replace(/\.(mp4|mov|webm|ogg)$/, ".ogg")} type="video/ogg" />
                         </video>
                     ) : (
                         <p>No video available</p>
