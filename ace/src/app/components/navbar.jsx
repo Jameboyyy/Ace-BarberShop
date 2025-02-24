@@ -28,7 +28,7 @@ const Navbar = () => {
         <ul>
           <li>
             <h1>
-              <Link href="/services" onClick={closeMenu}>
+              <Link href="https://getsquire.com/booking/brands/ace-barbershop" onClick={closeMenu}>
                 Services
               </Link>
             </h1>
@@ -49,7 +49,7 @@ const Navbar = () => {
           </li>
           <li>
             <h1>
-              <Link href="/services" onClick={closeMenu}>
+              <Link href="https://getsquire.com/booking/brands/ace-barbershop" onClick={closeMenu}>
                 Book Now
               </Link>
             </h1>
@@ -65,7 +65,7 @@ const Navbar = () => {
         <ul className="nav__links">
           <li className="nav__link">
             <h1>
-              <Link href="/services">Services</Link>
+              <Link href="https://getsquire.com/booking/brands/ace-barbershop">Services</Link>
             </h1>
           </li>
           <li className="nav__link">
@@ -92,7 +92,7 @@ const Navbar = () => {
       <div className="nav__right">
         <li className="nav__link">
           <h1>
-            <Link href="/services">Book Now</Link>
+            <Link href="https://getsquire.com/booking/brands/ace-barbershop">Book Now</Link>
           </h1>
         </li>
       </div>

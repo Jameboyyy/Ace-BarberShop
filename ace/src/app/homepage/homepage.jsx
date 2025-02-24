@@ -5,7 +5,7 @@ import './homepage.css';
 
 const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, servicesTitle, servicesProfile, barberProfiles, galleryImages}) => {
     const handleBooking = () => {
-
+            window.open("https://getsquire.com/booking/brands/ace-barbershop")
         }
         useEffect(() => {
             // ✅ Ensure homepage grid resets correctly
