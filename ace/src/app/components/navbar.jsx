@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import "./navbar.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram, faGoogle, faYelp } from '@fortawesome/free-brands-svg-icons';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -54,6 +56,17 @@ const Navbar = () => {
               </Link>
             </h1>
           </li>
+          <li className="sidebar__brand-icons">
+          <Link href="https://www.instagram.com/ace_barbershop_gg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+              <FontAwesomeIcon icon={faInstagram} className="brand-icon" />
+            </Link>
+            <Link href="https://www.google.com/maps/@33.7872659,-118.0312444,14z/data=!4m2!11m1!2sbSn9LSgZQlCScqM8GK8BNg?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D" aria-label="Google">
+              <FontAwesomeIcon icon={faGoogle} className="brand-icon" />
+            </Link>
+            <Link href="https://www.yelp.com/biz/ace-barbershop-garden-grove" aria-label="Yelp">
+              <FontAwesomeIcon icon={faYelp} className="brand-icon" />
+            </Link>
+          </li>
         </ul>
       </div>
 
@@ -95,6 +108,17 @@ const Navbar = () => {
             <Link href="https://getsquire.com/booking/brands/ace-barbershop">Book Now</Link>
           </h1>
         </li>
+        <li className="sidebar__brand-icons">
+          <Link href="https://www.instagram.com/ace_barbershop_gg?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" aria-label="Instagram">
+              <FontAwesomeIcon icon={faInstagram} className="brand-icon" />
+            </Link>
+            <Link href="https://www.google.com/maps/@33.7872659,-118.0312444,14z/data=!4m2!11m1!2sbSn9LSgZQlCScqM8GK8BNg?entry=ttu&g_ep=EgoyMDI1MDIxOS4xIKXMDSoASAFQAw%3D%3D" aria-label="Google">
+              <FontAwesomeIcon icon={faGoogle} className="brand-icon" />
+            </Link>
+            <Link href="https://www.yelp.com/biz/ace-barbershop-garden-grove" aria-label="Yelp">
+              <FontAwesomeIcon icon={faYelp} className="brand-icon" />
+            </Link>
+          </li>
       </div>
     </nav>
   );

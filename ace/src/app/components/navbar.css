@@ -161,6 +161,48 @@
     top: 50%;
     transform: translateY(-50%);
 }
+/* Brand Icons (Global Styling) */
+.brand-icons,
+.sidebar__brand-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between icons */
+}
+
+.brand-icon {
+    font-size: 20px; /* Adjust icon size */
+    color: white; /* Default icon color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.brand-icon:hover {
+    color: #007bff; /* Change icon color on hover */
+}
+
+/* Sidebar Brand Icons */
+.sidebar__brand-icons {
+    justify-content: center; /* Center icons horizontally */
+    align-items: center;
+    margin-left: 20px;
+}
+
+/* Brand Icons in Main Navigation */
+.nav__right .brand-icons {
+    margin-left: 20px; /* Space between "Book Now" and icons */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    /* Hide brand icons in the main nav on mobile */
+    .nav__right .brand-icons {
+        display: none;
+    }
+
+    /* Show brand icons in the sidebar on mobile */
+    .sidebar__brand-icons {
+        display: flex;
+    }
+}
 
 /* Show Sidebar Only on Mobile */
 @media screen and (max-width: 768px) {
