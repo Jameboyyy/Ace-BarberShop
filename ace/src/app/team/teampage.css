@@ -3,16 +3,19 @@
     padding: 0;
     box-sizing: border-box;
     text-align: center;
-    min-height: 75vh;
-    justify-content: center;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
 }
 
 .teampage__landscape--container {
+    position: relative;
     width: 100%;
     height: 85vh;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
+    margin-bottom: 50px;
 }
 
 .team__landscape--image {
@@ -31,8 +34,8 @@
     text-align: center;
     justify-content: center;
     display: flex;
-    margin: 10% auto;
     gap: 2%;
+    flex: 1;
 }
 
 .meetTheTeam--title {
@@ -40,14 +43,18 @@
 }
 
 .barber__card--wrapper {
+    position: relative;
     display: grid;
-    grid-template-columns: var(--grid-columns, repeat(4, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
-    gap: 20px;
-    align-items: stretch;
+    gap: 5%;
+    align-items: stretch;   
+    width: 100%;
+    max-width: 1200px;
 }
 
 .barber__card--container {
+    position: relative;
     width: 300px;
     height: 400px;
     display: flex;
@@ -86,9 +93,29 @@
     margin: auto;
 }
 
+@media screen and (max-width: 1275px) {
+    .barber__card--wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .barber__card--container {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .barber__card--wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .barber__card--container {
+        margin: 0 auto;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .barber__card--wrapper {
-        row-gap: 15px;
-        column-gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .barber__card--container {
+        margin: 0 auto;
     }
 }

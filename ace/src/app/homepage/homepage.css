@@ -125,13 +125,16 @@
 }
 
 .barber__card--wrapper {
+    position: relative;
     display: grid;
-    grid-template-columns: var(--grid-columns, repeat(3, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     flex-wrap: wrap;
     justify-content: center;
     align-items: stretch    ;
     gap: 5%;
     margin: auto;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .barber__card--container {
@@ -145,6 +148,8 @@
     background-color: var(--accent-color) !important;
     overflow: hidden;
     border-radius: 15px;
+    transition: width 0.3s ease;
+    margin: 0 auto;
 }
 
 .barber__card--img {
@@ -173,8 +178,21 @@
 
 @media screen and (max-width: 768px) {
     .barber__card--wrapper {
-        row-gap: 15px;
-        column-gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .barber__card--container {
+        margin: 0 auto;
+    }
+}
+s
+@media screen and (max-width: 1100px) {
+    .barber__card--wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .barber__card--container {
+        margin: 0 auto;
     }
 }
 
