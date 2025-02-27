@@ -27,7 +27,8 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                             autoPlay
                             loop
                             muted
-                            preload="metadata"
+                            playsInLine
+                            preload="auto"
                             className="landscape-video"
                             loading="lazy"
                         >
