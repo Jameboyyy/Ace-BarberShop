@@ -8,22 +8,22 @@ const Footer = () => {
             <ul className="footer__links">
                 <li className="footer__link">
                     <p>
-                        <Link href="#home">Home</Link>
+                        <Link href="/">Home</Link>
                     </p>
                 </li>
                 <li className="footer__link">
                     <p>
-                        <Link href="#services">Services</Link>
+                        <Link href="https://getsquire.com/booking/brands/ace-barbershop">Services</Link>
                     </p>
                 </li>
                 <li className="footer__link">
                     <p>
-                        <Link href="#team">Team</Link>
+                        <Link href="/team">Team</Link>
                     </p>
                 </li>
                 <li className="footer__link">
                     <p>
-                        <Link href="#gallery">Gallery</Link>
+                        <Link href="/gallery">Gallery</Link>
                     </p>
                 </li>
             </ul>
