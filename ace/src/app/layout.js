@@ -5,19 +5,19 @@ import './team/teampage.css'
 import './gallery/gallerypage.css'
 
 export const metadata = {
+  metadataBase: new URL("https://acebarbershopgg.com"),
   title: "Ace BarberShop GG | Best Haircuts in Garden Grove",
   description: "Ace BarberShop GG offers expert haircuts, fades, and grooming services in Garden Grove. Book an appointment today and experience top-tier barbering.",
   keywords: "Ace BarberShop, barber shop Garden Grove, haircuts, fades, grooming, men's haircuts, barber near me, beard trim",
   authors: [{ name: "Ace BarberShop GG", url: "https://acebarbershopgg.com" }],
   icons: {
-    icon: "/favicon.ico", // Default favicon
+    icon: "/favicon.ico",
     shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png", // Optional for iPhones
   },
   openGraph: {
     title: "Ace BarberShop GG | Best Haircuts in Garden Grove",
     description: "Get the best haircuts, fades, and grooming services at Ace BarberShop GG. Professional barbers, top-quality service, and a welcoming atmosphere.",
-    url: "https://acebarbershopgg.com", 
+    url: "https://acebarbershopgg.com",
     siteName: "Ace BarberShop GG",
     images: [
       {
@@ -30,6 +30,7 @@ export const metadata = {
     type: "website",
   },
 };
+
 
 
 export default function RootLayout({ children }) {
