@@ -37,6 +37,17 @@ textarea {
   --font-size-p: 20px;
 }
 
+@media (max-width: 768px) {
+  :root {
+    --font-size-h1: 15px;
+    --font-size-h2: 40px;
+    --font-size-h3: 15px;
+    --font-size-h4: 20px;
+    --font-size-h5: 15px;
+    --font-size-p: 16px;
+  }
+}
+
 html, body {
   height: 100%;
   background-color: var(--background-color);
@@ -101,13 +112,6 @@ textarea {
   font-family: 'Heading 4';
   src: url('/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf') format('truetype');
   font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Heading 5';
-  src: url('/fonts/Roboto-VariableFont_wght.ttf') format('truetype');
-  font-weight: normal;
   font-style: normal;
 }
 

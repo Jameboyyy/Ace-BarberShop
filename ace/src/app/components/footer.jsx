@@ -28,7 +28,7 @@ const Footer = () => {
                 </li>
             </ul>
             <p className="footer__credits">
-                &copy; 2025 Ace Barbershop. All rights reservered.
+                &copy; 2025 Ace Barbershop. All rights reserved.
             </p>
         </footer>
     );

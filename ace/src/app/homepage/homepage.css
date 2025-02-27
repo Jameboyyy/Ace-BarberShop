@@ -2,14 +2,6 @@
     background-color: var(--background-color);
 }
 
-#teampage .homepage__meetTheTeam--container {
-    all: unset;
-}
-
-.teampage-styles .barber__card--wrapper {
-    all: unset;
-}
-
 /* Landscape Section */
 
 .homepage__landscape--container {
@@ -46,6 +38,13 @@
     text-align: center;
 }
 
+@media (max-width: 768px) {
+    .homepage__title {
+        max-width: 350px;
+        width: 100%;
+    }
+}
+
 /* Mission Statement Section */
 
 .homepage__missionStatement--container {
@@ -70,7 +69,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 5% auto;
+    margin: 42px auto;
     text-align: center;
     background-color: var(--accent-color);
     max-width: fit-content;
@@ -92,6 +91,7 @@
 
 .homepage__services--title {
     text-align: center;
+    margin-bottom: 10%;
 }
 
 .homepage__service--container {
@@ -135,6 +135,7 @@
     margin: auto;
     width: 100%;
     max-width: 1200px;
+    margin: 0 auto;
 }
 
 .barber__card--container {
@@ -166,6 +167,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 1/1;
 }
 
 .barber__card--name {
@@ -176,16 +178,6 @@
     margin: 5% auto;
 }
 
-@media screen and (max-width: 768px) {
-    .barber__card--wrapper {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    .barber__card--container {
-        margin: 0 auto;
-    }
-}
-s
 @media screen and (max-width: 1100px) {
     .barber__card--wrapper {
         grid-template-columns: repeat(2, 1fr);
@@ -194,6 +186,17 @@ s
     .barber__card--container {
         margin: 0 auto;
     }
+}
+
+@media screen and (max-width: 768px) {
+    .barber__card--wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .barber__card--container {
+        margin: 0 auto;
+    }
+
 }
 
 /* Gallery Section */

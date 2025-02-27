@@ -2,6 +2,8 @@
 
 import React from 'react';
 import './gallerypage.css'
+import Footer from '../components/footer';
+import '../components/footer.css'
 
 const Gallerypage = ({galleryImages}) => {
     return (
@@ -21,6 +23,7 @@ const Gallerypage = ({galleryImages}) => {
                             )}
                         </div>
             </div>
+            <Footer />
         </section>
     );
 }

@@ -192,7 +192,7 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     /* Hide brand icons in the main nav on mobile */
     .nav__right .brand-icons {
         display: none;
@@ -205,7 +205,7 @@
 }
 
 /* Show Sidebar Only on Mobile */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
     .hamburger {
         display: block;
     }

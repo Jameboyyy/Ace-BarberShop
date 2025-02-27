@@ -32,20 +32,20 @@ const Teampage = ({barberProfiles, teamLandscapePicture }) => {
                     <p>No team landscape picture available</p>
                 )}
             </div>
-            <div className="homepage__meetTheTeam--container">
+            <div className="teampage__meetTheTeam--container">
                 <h2 className="meetTheTeam--title">Meet The Masters</h2>
-                <div className="barber__card--wrapper">
+                <div className="tpbarber__card--wrapper">
                     {barberProfiles && barberProfiles.length > 0 ? (
                         barberProfiles.slice(0, 12).map((barber, index) => (
                             <div
                                 key={barber.barbersortOrder || index}
-                                className="barber__card--container"
+                                className="tpbarber__card--container"
                             >
-                                <div className="barber__card--img">
+                                <div className="tpbarber__card--img">
                                     <img src={barber.photoUrl} alt={barber.name} />
                                 </div>
-                                <h4 className="barber__card--name">{barber.name}</h4>
-                                <p className="barber__card--desc">{barber.bio}</p>
+                                <h4 className="tpbarber__card--name">{barber.name}</h4>
+                                <p className="tpbarber__card--desc">{barber.bio}</p>
                             </div>
                         ))
                     ) : (

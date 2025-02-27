@@ -2,6 +2,8 @@
 
 import React, { useEffect } from 'react';
 import './homepage.css';
+import Footer from '../components/footer';
+import '../components/footer.css'
 
 const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, servicesTitle, servicesProfile, barberProfiles, galleryImages}) => {
     const handleBooking = () => {
@@ -150,6 +152,7 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                     </p>
                 </div>
             </div>
+            <Footer />
         </section>
     );
 };

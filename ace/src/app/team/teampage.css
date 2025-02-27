@@ -1,9 +1,6 @@
 #teampage {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     text-align: center;
-    justify-content: flex-start;
+    justify-content: center;
     display: flex;
     flex-direction: column;
 }
@@ -11,11 +8,8 @@
 .teampage__landscape--container {
     position: relative;
     width: 100%;
-    height: 85vh;
     margin: 0 auto;
     overflow: hidden;
-    position: relative;
-    margin-bottom: 50px;
 }
 
 .team__landscape--image {
@@ -27,34 +21,31 @@
     opacity: 70%;
 }
 
-
-.homepage__meetTheTeam--container {
+.teampage__meetTheTeam--container {
     position: relative;
+    margin: 0 auto;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     display: flex;
     gap: 2%;
-    flex: 1;
 }
 
 .meetTheTeam--title {
     margin: 5% auto;
 }
 
-.barber__card--wrapper {
+.tpbarber__card--wrapper {
     position: relative;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
+
     gap: 5%;
-    align-items: stretch;   
     width: 100%;
-    max-width: 1200px;
 }
 
-.barber__card--container {
-    position: relative;
+.tpbarber__card--container {
     width: 300px;
     height: 400px;
     display: flex;
@@ -65,9 +56,11 @@
     background-color: var(--accent-color) !important;
     overflow: hidden;
     border-radius: 15px;
+    transition: width 0.3s ease;
+    margin: 0 auto;
 }
 
-.barber__card--img {
+.tpbarber__card--img {
     width: 100%;
     height: 300px;
     overflow: hidden;
@@ -76,46 +69,36 @@
     align-items: center;
 }
 
-.barber__card--img img {
+.tpbarber__card--img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+    aspect-ratio: 1/1;
 }
 
-.teampage-styles .barber__card--wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    justify-content: center;
-    align-items: stretch;
-    max-width: 1200px;
-    margin: auto;
+.tpbarber__card--name {
+    text-align: center;
 }
 
-@media screen and (max-width: 1275px) {
-    .barber__card--wrapper {
+.tpbarber__card--desc {
+    margin: 5% auto;
+}
+
+@media screen and (max-width: 1400px) {
+    .tpbarber__card--wrapper {
         grid-template-columns: repeat(3, 1fr);
-    }
-    .barber__card--container {
-        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 1000px) {
-    .barber__card--wrapper {
+    .tpbarber__card--wrapper {
         grid-template-columns: repeat(2, 1fr);
-    }
-    .barber__card--container {
-        margin: 0 auto;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .barber__card--wrapper {
+    .tpbarber__card--wrapper {
         grid-template-columns: repeat(1, 1fr);
-    }
-    .barber__card--container {
-        margin: 0 auto;
     }
 }
