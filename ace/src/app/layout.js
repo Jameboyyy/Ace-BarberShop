@@ -1,4 +1,5 @@
 import Navbar from "./components/navbar"
+import Head from 'next/head';
 import './globals.css'
 import './homepage/homepage.css'
 import './team/teampage.css'
