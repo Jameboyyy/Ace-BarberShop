@@ -96,7 +96,7 @@ textarea {
 
 @font-face {
   font-family: 'Heading 2';
-  src: url('public/fonts/PlayfairDisplay-Italic.woff') format('woff');
+  src: url('/fonts/PlayfairDisplay-Italic.woff') format('woff');
   font-weight: normal;
   font-style: italic;
 }
