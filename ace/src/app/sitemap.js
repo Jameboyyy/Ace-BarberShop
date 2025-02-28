@@ -1,30 +1,38 @@
-import { MetadataRoute } from 'next';
+export const runtime = 'edge'; // Ensures fast response
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+export default function GET() {
+  return new Response(
+    `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://acebarbershopgg.com/</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+      </url>
+      <url>
+        <loc>https://acebarbershopgg.com/about</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
+        <loc>https://acebarbershopgg.com/gallery</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+      <url>
+        <loc>https://acebarbershopgg.com/contact</loc>
+        <lastmod>${new Date().toISOString()}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+      </url>
+    </urlset>`,
     {
-      url: 'https://acebarbershopgg.com',  // Homepage
-      lastModified: new Date(),  // Last modified date
-      changeFrequency: 'daily',
-      priority: 1.0,  // Higher priority for homepage
-    },
-    {
-      url: 'https://acebarbershopgg.com/about',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://acebarbershopgg.com/gallery',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: 'https://acebarbershopgg.com/contact',
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-  ];
+      headers: {
+        'Content-Type': 'application/xml',
+      },
+    }
+  );
 }
