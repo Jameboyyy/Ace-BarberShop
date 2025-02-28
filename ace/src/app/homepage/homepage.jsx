@@ -24,13 +24,14 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                     <h2 className="homepage__title">{landscapeTitle || 'Default Title'}</h2>
                     {landscapeVideoUrl ? (
                         <video
+                            className="landscape-video"
                             autoPlay
                             loop
                             muted
                             playsInline
                             preload="auto"
-                            className="landscape-video"
                             loading="lazy"
+                            controls = {false}
                         >
                             <source src={landscapeVideoUrl} type="video/mp4" />
                             <source src={landscapeVideoUrl.replace(".mp4", ".mov")} type="video/quicktime" />
