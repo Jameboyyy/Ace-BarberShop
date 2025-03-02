@@ -142,8 +142,7 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                 <div className="info__sections">
                     <h4 className="info__sections--title">Contact</h4>
                     <p className="info__sections--info">
-                        (714) 552-3012<br/>
-                        barbershop@email.com
+                        (714) 423-6137<br/>
                     </p>
                 </div>
                 <div className="info__sections">
