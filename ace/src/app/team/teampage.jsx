@@ -2,11 +2,12 @@
 
 import React, { useEffect } from 'react';
 import './teampage.css';
+import Footer from '../components/footer';
 
 
 const Teampage = ({barberProfiles, teamLandscapePicture }) => {
     const handleBooking = () => {
-
+        window.open("https://getsquire.com/booking/brands/ace-barbershop")
     }
 
     useEffect(() => {
@@ -40,6 +41,8 @@ const Teampage = ({barberProfiles, teamLandscapePicture }) => {
                             <div
                                 key={barber.barbersortOrder || index}
                                 className="tpbarber__card--container"
+                                onClick={() => handleBooking(barber.websiteUrl)}
+                                style={{ cursor: 'pointer'}}
                             >
                                 <div className="tpbarber__card--img">
                                     <img src={barber.photoUrl} alt={barber.name} />
@@ -53,6 +56,7 @@ const Teampage = ({barberProfiles, teamLandscapePicture }) => {
                     )}
                 </div>
             </div>
+            <Footer />
         </section>
 
     );

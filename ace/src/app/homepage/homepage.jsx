@@ -91,6 +91,8 @@ const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, service
                                 .slice(0,3)
                                 .map((barber, index) => (
                                     <div key={barber.barbersortOrder || index}
+                                    onClick={() => handleBooking(barber.websiteUrl)}
+                                    style={{ cursor: 'pointer'}}
                                     className="barber__card--container">
                                         <div className="barber__card--img">
                                             <img src={barber.photoUrl} alt="" />
