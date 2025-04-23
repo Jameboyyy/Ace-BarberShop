@@ -56,7 +56,6 @@ const Teampage = ({barberProfiles, teamLandscapePicture }) => {
                     )}
                 </div>
             </div>
-            <Footer />
         </section>
 
     );
