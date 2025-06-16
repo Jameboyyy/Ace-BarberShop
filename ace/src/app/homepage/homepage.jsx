@@ -5,10 +5,14 @@ import './homepage.css';
 import Footer from '../components/footer';
 import '../components/footer.css'
 
-const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, servicesTitle, servicesProfile, barberProfiles, galleryImages}) => {
+const Homepage = ({ landscapeTitle, landscapeVideoUrl, missionStatement, servicesTitle, servicesProfile, barberProfiles, galleryImages, bookingLink}) => {
     const handleBooking = () => {
-            window.open("https://getsquire.com/booking/brands/ace-barbershop")
+        if (bookingLink) {
+        window.open(bookingLink, "_blank");
+        } else {
+        alert("Booking link not available.");
         }
+    };
         useEffect(() => {
             // ✅ Ensure homepage grid resets correctly
             document.documentElement.style.setProperty("--grid-columns", "repeat(3, 1fr)");

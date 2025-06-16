@@ -3,6 +3,7 @@ import sanityClient from '../acebarbershop/sanityClient';
 
 async function getSanityData() {
     const homepageQuery = `*[_type == "homePage"][0]{
+        bookingLink,
         landscapeTitle,
         "landscapeVideoUrl": landscapeVideo.asset->url,
         missionStatement
@@ -73,6 +74,7 @@ export default async function Page() {
             servicesProfile={servicesData?.servicesProfile || []}
             galleryImages={galleryData?.galleryImages || []}
             barberProfiles={teamData?.barberProfiles || []}
+            bookingLink={homepageData?.bookingLink || ""}
         />
     );
 }

@@ -5,6 +5,13 @@ export default {
   type: "document",
   fields: [
     {
+      name: "bookingLink",
+      title: "Booking Link",
+      type: "url",
+      validation: (Rule: Rule) => 
+        Rule.uri({ scheme: ["http", "https"] }).required().error("A valid booking URL is required"),
+    },
+    {
       name: "teamLandscapePicture",
       title: "Team Landscape Picture",
       type: "array",

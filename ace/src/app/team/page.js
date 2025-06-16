@@ -5,6 +5,7 @@ import sanityClient from "@/acebarbershop/sanityClient";
 
 async function getSanityData () {
     const teamQuery = `*[_type == "teampage"][0]{
+        bookingLink,
         teamLandscapePicture[]{
             asset->{
                 _id,
@@ -41,6 +42,7 @@ export default async function Page() {
         <Teampage
             barberProfiles={teamData?.barberProfiles || []}
             teamLandscapePicture={teamData?.teamLandscapePicture || []}
+            bookingLink={teamData?.bookingLink || ""}
         />
     );
 }

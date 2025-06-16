@@ -5,10 +5,14 @@ import './teampage.css';
 import Footer from '../components/footer';
 
 
-const Teampage = ({barberProfiles, teamLandscapePicture }) => {
+const Teampage = ({barberProfiles, teamLandscapePicture, bookingLink }) => {
     const handleBooking = () => {
-        window.open("https://getsquire.com/booking/brands/ace-barbershop")
-    }
+        if (bookingLink) {
+        window.open(bookingLink, "_blank");
+        } else {
+        alert("Booking link not available.");
+        }
+    };
 
     useEffect(() => {
         // ✅ Ensure team page grid resets correctly
